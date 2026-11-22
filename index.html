@@ -1,0 +1,212 @@
+<!-- ADS Open Order Converter — © 2026 Kishore Khelani. All rights reserved. -->
+<!doctype html>
+<html lang="en" data-brand="alpine">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Offline converter: Walmart ADS Open Order pack-details Excel to ADS Export / SO Upload Excel.">
+<meta name="author" content="Kishore Khelani">
+<meta name="copyright" content="© 2026 Kishore Khelani. All rights reserved.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<title>ADS Open Order Converter</title>
+<link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <span>Theme</span>
+    <div class="seg" role="group" aria-label="Theme">
+      <button type="button" data-b="alpine">Alpine</button>
+      <button type="button" data-b="now">NOW</button>
+    </div>
+  </div>
+  <header class="banner b-alpine">
+    <div class="brand">
+      <img class="lg-alpine" src="assets/alpine-group-logo.png" alt="Alpine Group">
+      <img class="lg-alex" src="assets/alex-apparels-logo.png" alt="Alex Apparels">
+    </div>
+    <div class="title-side">
+      <span class="badge">Offline · v1.7</span>
+      <div class="card">
+        <h1>ADS Open Order → Excel Export</h1>
+        <div class="sub">Walmart ADS pack-details file → order upload sheet (IS · Store REPL · Online DC). Runs fully offline.</div>
+      </div>
+    </div>
+  </header>
+  <header class="banner b-now">
+    <svg class="waves" viewBox="0 0 1400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#ffffff" stroke-width="2.2" stroke-opacity=".85"><path d="M-50 80 C 250 -110 520 72.0 760 0 S 1150 -103.0 1450 -70"/><path d="M-50 106 C 250 -87 520 102.80000000000001 760 26 S 1150 -79.7 1450 -44"/><path d="M-50 132 C 250 -64 520 133.60000000000002 760 52 S 1150 -56.400000000000006 1450 -18"/><path d="M-50 158 C 250 -41 520 164.4 760 78 S 1150 -33.10000000000001 1450 8"/><path d="M-50 184 C 250 -18 520 195.20000000000002 760 104 S 1150 -9.799999999999997 1450 34"/><path d="M-50 210 C 250 5 520 226.0 760 130 S 1150 13.5 1450 60"/><path d="M-50 236 C 250 28 520 256.8 760 156 S 1150 36.8 1450 86"/><path d="M-50 262 C 250 51 520 287.6 760 182 S 1150 60.099999999999994 1450 112"/><path d="M-50 288 C 250 74 520 318.4 760 208 S 1150 83.39999999999999 1450 138"/><path d="M-50 314 C 250 97 520 349.20000000000005 760 234 S 1150 106.7 1450 164"/><path d="M-50 340 C 250 120 520 380.0 760 260 S 1150 130.0 1450 190"/><path d="M-50 366 C 250 143 520 410.8 760 286 S 1150 153.3 1450 216"/><path d="M-50 392 C 250 166 520 441.6 760 312 S 1150 176.6 1450 242"/><path d="M-50 418 C 250 189 520 472.4 760 338 S 1150 199.89999999999998 1450 268"/><path d="M-50 444 C 250 212 520 503.20000000000005 760 364 S 1150 223.2 1450 294"/><path d="M-50 470 C 250 235 520 534.0 760 390 S 1150 246.5 1450 320"/><path d="M-50 496 C 250 258 520 564.8 760 416 S 1150 269.8 1450 346"/><path d="M-50 522 C 250 281 520 595.6 760 442 S 1150 293.1 1450 372"/><path d="M-50 548 C 250 304 520 626.4 760 468 S 1150 316.4 1450 398"/><path d="M-50 574 C 250 327 520 657.2 760 494 S 1150 339.7 1450 424"/><path d="M-50 600 C 250 350 520 688.0 760 520 S 1150 363.0 1450 450"/><path d="M-50 626 C 250 373 520 718.8 760 546 S 1150 386.3 1450 476"/></g><g fill="none" stroke="#c9cfd8" stroke-width="1" stroke-opacity=".55" transform="translate(0,9)"><path d="M-50 80 C 250 -110 520 72.0 760 0 S 1150 -103.0 1450 -70"/><path d="M-50 132 C 250 -64 520 133.60000000000002 760 52 S 1150 -56.400000000000006 1450 -18"/><path d="M-50 184 C 250 -18 520 195.20000000000002 760 104 S 1150 -9.799999999999997 1450 34"/><path d="M-50 236 C 250 28 520 256.8 760 156 S 1150 36.8 1450 86"/><path d="M-50 288 C 250 74 520 318.4 760 208 S 1150 83.39999999999999 1450 138"/><path d="M-50 340 C 250 120 520 380.0 760 260 S 1150 130.0 1450 190"/><path d="M-50 392 C 250 166 520 441.6 760 312 S 1150 176.6 1450 242"/><path d="M-50 444 C 250 212 520 503.20000000000005 760 364 S 1150 223.2 1450 294"/><path d="M-50 496 C 250 258 520 564.8 760 416 S 1150 269.8 1450 346"/><path d="M-50 548 C 250 304 520 626.4 760 468 S 1150 316.4 1450 398"/><path d="M-50 600 C 250 350 520 688.0 760 520 S 1150 363.0 1450 450"/></g></svg>
+    <div class="left">
+      <svg class="amark" viewBox="0 0 120 100" aria-label="Alpine"><ellipse cx="60" cy="50" rx="60" ry="50" fill="#000"/><path d="M60 14 L95 79 L25 79 Z" fill="#fff"/><path d="M60 47 L71 67 L49 67 Z" fill="#000"/></svg>
+      <div>
+        <span class="badge">Offline · v1.7</span>
+        <h1>ADS Open Order <span class="arr">→</span> Excel Export</h1>
+        <div class="sub">Walmart ADS pack-details file → order upload sheet (IS · Store REPL · Online DC). Runs fully offline.</div>
+      </div>
+    </div>
+    <div class="right">
+      <img class="lg-datatex" src="assets/datatex-logo.png" alt="datatex">
+      <img class="lg-alpine" src="assets/alpine-group-logo.png" alt="Alpine Group">
+    </div>
+    <div class="strip">
+      <span class="tag-line">NOW · Order Upload</span>
+      <img src="assets/now-logo.png" alt="NOW — network oriented world">
+    </div>
+  </header>
+  <div class="grid">
+    <div class="panel">
+      <h2>1 · Input file</h2>
+      <div class="drop" id="drop" tabindex="0">
+        <strong>Drop the ADS .xlsx here</strong>
+        <span class="hint">or click to browse — needs the Store Summary and Pack Details sheets</span>
+        <span class="file" id="fileName"></span>
+      </div>
+      <input type="file" id="file" accept=".xlsx,.xls,.xlsm" class="hidden">
+    </div>
+    <div class="panel">
+      <h2>2 · Order settings</h2>
+      <div id="devBar" class="devbar hidden">
+        <div class="devbar-row">
+          <span class="devtitle">Developer mode — code protection off</span>
+          <span class="devbtns">
+            <button type="button" class="sm" id="devHashBtn">Make password hash</button>
+            <button type="button" class="sm primary" id="devLock">Lock</button>
+          </span>
+        </div>
+        <div id="hashBox" class="hashbox hidden">
+          <label for="newPw">New password</label>
+          <input type="password" id="newPw" autocomplete="new-password">
+          <div class="hashrow"><code id="hashOut"></code><button type="button" class="sm" id="copyHash">Copy</button></div>
+          <div class="hint-sm">Paste this into <code>devHash</code> in <code>js/config.js</code>, then rebuild and re-publish.</div>
+        </div>
+      </div>
+      <div class="fields">
+        <div>
+          <label for="pg">PG # (PO base) <span class="req">*</span></label>
+          <input type="text" id="pg" placeholder="e.g. 31075" autocomplete="off">
+        </div>
+        <div>
+          <label for="startSeq">PO start sequence #</label>
+          <input type="number" id="startSeq" value="1" min="0" step="1">
+          <div class="hint-sm" id="seqHint"></div>
+        </div>
+        <div>
+          <label for="season">Season <span class="req">*</span></label>
+          <input type="text" id="season" placeholder="e.g. SP27" autocomplete="off">
+        </div>
+        <div>
+          <label for="sizeMode">Size sequence</label>
+          <select id="sizeMode">
+            <option value="file">As in ADS file</option>
+            <option value="std">Standard (XS → XXXL)</option>
+            <option value="custom">Custom order…</option>
+          </select>
+        </div>
+        <div class="full hidden" id="customWrap">
+          <label for="sizeCustom">Custom size order (comma separated, smallest first)</label>
+          <input type="text" id="sizeCustom" placeholder="XS, S, M, L, XL, XXL, XXXL" autocomplete="off">
+          <div class="hint-sm">Sizes not in this list go after it — numbers ascending, then the rest in file order.</div>
+        </div>
+        <div class="full">
+          <label>Ship date = In-Store date − days</label>
+          <div class="trio">
+            <div><span class="mini">IS</span><input type="number" id="offIS" value="70" min="0" step="1" aria-label="Initial Set days before in-store"></div>
+            <div><span class="mini">REPL</span><input type="number" id="offRepl" value="70" min="0" step="1" aria-label="Store REPL days before in-store"></div>
+            <div><span class="mini">DC</span><input type="number" id="offDC" value="70" min="0" step="1" aria-label="Online DC days before in-store"></div>
+          </div>
+        </div>
+        <div>
+          <label for="tpl">Export template</label>
+          <select id="tpl">
+            <option value="ads">ADS Export (13 columns)</option>
+            <option value="so">SO Upload Template (20 columns)</option>
+          </select>
+        </div>
+        <div id="odWrap" class="hidden">
+          <label for="orderDate">Order Date</label>
+          <input type="date" id="orderDate">
+        </div>
+        <div>
+          <label for="fmt">Output format</label>
+          <select id="fmt">
+            <option value="xls">.xls (Excel 97-2003)</option>
+            <option value="xlsx">.xlsx (with header colours)</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="primary" id="dl" disabled>Download output</button>
+        <span class="note" id="dlName" style="margin:0"></span>
+      </div>
+    </div>
+  </div>
+  <div id="errBox" class="msg err hidden"></div>
+  <div id="warnBox" class="msg warn hidden"></div>
+  <div id="results" class="hidden">
+    <div class="stats">
+      <div class="stat"><div class="k">POs</div><div class="v" id="sPO">0</div></div>
+      <div class="stat"><div class="k">Lines</div><div class="v" id="sLines">0</div></div>
+      <div class="stat"><div class="k">Total Qty (pcs)</div><div class="v" id="sQty">0</div></div>
+      <div class="stat"><div class="k">Style / Colours</div><div class="v" id="sStyle">0</div></div>
+    </div>
+    <div class="panel section">
+      <h2>PO summary</h2>
+      <div class="tablewrap" style="max-height:none">
+        <table>
+          <thead><tr><th>PO No</th><th>Type</th><th>In-Store</th><th>Ship Date</th><th class="n">Lines</th><th class="n">Qty</th></tr></thead>
+          <tbody id="poBody"></tbody>
+          <tfoot><tr><td colspan="4">Total</td><td class="n" id="tLines"></td><td class="n" id="tQty"></td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="panel section">
+      <div class="toolbar">
+        <h2 style="margin:0">Output preview</h2>
+        <select id="poFilter"><option value="">All POs</option></select>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead id="pvHead"></thead>
+          <tbody id="pvBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel section">
+    <details>
+      <summary>Conversion rules</summary>
+      <div class="rule" style="margin-top:10px">
+        <p><b>Initial Set (SCAS)</b> — from <code>Pack Details - IS</code>. Each pack's units = <code>Total Packs × Ratio</code>.
+          Delivery quantities come from the Store Summary table (<code>Type = IS</code>). For deliveries 2..n:
+          <code>ROUND(Total Packs ÷ Total IS Units × Delivery Units, 0) × Ratio</code>; delivery 1 takes the remainder.
+          Item No = <code>LEFT(Color,6) & "-" & pack #</code>. PCS Per Poly blank, Ratio = pack ratio.</p>
+        <p><b>Store REPL (SCSS)</b> — one PO per <code>REPL Date</code> block in <code>Pack Details - Store REPL</code>.
+          Item No = <code>LEFT(Color,7) & "-" & Size</code>, Qty = Repl Quantity, PCS Per Poly 1, Ratio = Vendor Pack.</p>
+        <p><b>Online REPL (SCSS)</b> — <code>Pack Details - Online REPL</code>, PO suffix <code>-DC-</code>.
+          Item No = <code>LEFT(Color,5) & "-DC-" & Size</code>.</p>
+        <p><b>PO numbering</b> runs continuously: <code>PG-IS-1, PG-IS-2, PG-REPL-3 … PG-DC-n</code>.
+          <b>Ship Date</b> = In-Store / REPL date − days, set separately for IS, REPL and DC (default 70 each).</p><p><b>SO Upload Template</b> — same lines in the 20-column SO layout: Cancel Date = Ship Date, Order Date = date entered (default today), Ratio type <code>Fixed</code>, Ship to <code>USA</code>, ColorCode = Color name; Category, KIT, Carton UPC and SKU UPC left blank. Price = First Cost. Lines with zero qty are dropped.</p>
+      </div>
+    </details>
+  </div>
+  <footer class="credit">
+    <span class="who">Designed and Developed by <b>Kishore Khelani</b></span>
+    <span class="org">Alpine Group · Alex Apparels</span>
+    <img class="f-now" src="assets/now-logo.png" alt="NOW">
+  </footer>
+</div>
+<div id="pwModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pwTitle">
+  <form class="modal-card" id="pwForm" autocomplete="off">
+    <h3 id="pwTitle">Developer access</h3>
+    <label for="pwInput">Password</label>
+    <input type="password" id="pwInput" autocomplete="current-password">
+    <div class="pwmsg" id="pwMsg" role="alert"></div>
+    <div class="actions">
+      <button type="button" id="pwCancel">Cancel</button>
+      <button type="submit" class="primary">Unlock</button>
+    </div>
+  </form>
+</div>
+<script src="js/vendor/xlsx.bundle.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
